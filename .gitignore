@@ -1,0 +1,26 @@
+# OS Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Obsidian
+.obsidian/
+
+# Backup files
+*.bak
+*~
+*.swp
+
+# Sensitive info
+*.conf
+*password*
+*credential*
+
+# OSCP Exam (NEVER COMMIT)
+*exam*
+*Exam*
+*EXAM*
+
+# Personal notes
+.vscode/
+.idea/
