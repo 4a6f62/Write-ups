@@ -190,7 +190,7 @@ python exploit.py -H 192.168.127.65 -P 9998
 ```
 
 Port 80 reveals standard ISS page:
-![[Pasted image 20260123095440.png]]
+![Pasted image 20260123095440](images/Pasted image 20260123095440.png)
 
 Crackmap doesn't reveal anything nice:
 ```sh
@@ -267,7 +267,7 @@ Nmap done: 1 IP address (1 host up) scanned in 26.25 seconds
 ```
 
 Port 9998 is SmarterMail root interface?:
-![[Pasted image 20260123100742.png]]
+![Pasted image 20260123100742](images/Pasted image 20260123100742.png)
 
 Found an other exploit:
 https://www.exploit-db.com/exploits/49216

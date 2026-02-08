@@ -136,7 +136,7 @@ Browsing to port 80 reveals an HP Power Manager login page.
 
 After logging in, identified **HP Power Manager version** from the interface.
 
-![[Pasted image 20260208095546.png]]
+![Pasted image 20260208095546](images/Pasted image 20260208095546.png)
 
 ## Initial Exploitation Attempts
 
@@ -146,7 +146,7 @@ Found exploit on Exploit-DB: https://www.exploit-db.com/exploits/4744
 
 This exploit targets GoAhead WebServer password disclosure vulnerability but **did not work** for this version.
 
-![[Pasted image 20260208095339.png]]
+![Pasted image 20260208095339](images/Pasted image 20260208095339.png)
 
 ### Attempt 2: HP Power Manager Buffer Overflow (msfvenom)
 

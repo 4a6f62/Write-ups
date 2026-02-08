@@ -1,31 +1,31 @@
 Initial nmap:
-![[images/Pasted image 20260105110103.png]]
+![Pasted image 20260105110103](images/Pasted image 20260105110103.png)
 
 Hydra on ssh and trying to connect via ssh:
-![[images/Pasted image 20260105110403.png]]
+![Pasted image 20260105110403](images/Pasted image 20260105110403.png)
 
 Netcat on port 25:
-![[images/Pasted image 20260105110517.png]]
+![Pasted image 20260105110517](images/Pasted image 20260105110517.png)
 
 Nmap on all ports:
-![[images/Pasted image 20260105110643.png]]
+![Pasted image 20260105110643](images/Pasted image 20260105110643.png)
 Found port 60000
 
 netcat on port 6000:
-![[images/Pasted image 20260105110723.png]]
+![Pasted image 20260105110723](images/Pasted image 20260105110723.png)
 This is also a ssh port?
 
 Also cant connect on 6000 via ssh
-![[images/Pasted image 20260105110837.png]]
+![Pasted image 20260105110837](images/Pasted image 20260105110837.png)
 
 Curl on port 80 reveils bin message:
-![[images/Pasted image 20260105110915.png]]
+![Pasted image 20260105110915](images/Pasted image 20260105110915.png)
 
 Bin to ASCII reveils taunting message:
-![[images/Pasted image 20260105111002.png]]
+![Pasted image 20260105111002](images/Pasted image 20260105111002.png)
 
 nxc reveils no shares:
-![[images/Pasted image 20260105111143.png]]
+![Pasted image 20260105111143](images/Pasted image 20260105111143.png)
 
 nmap on all open ports with -sCV, reveils Sendmail version:
 ```ssh
@@ -112,27 +112,27 @@ Nmap done: 1 IP address (1 host up) scanned in 42.03 seconds
 ```
 
 feroxbuster on port 80 reveils no new info:
-![[images/Pasted image 20260105111647.png]]
+![Pasted image 20260105111647](images/Pasted image 20260105111647.png)
 
 Searchsploit on vuln version of Sendmail returns 2051.py
-![[images/Pasted image 20260105112017.png]]
+![Pasted image 20260105112017](images/Pasted image 20260105112017.png)
 Moved 2051 to current dir:
-![[images/Pasted image 20260105112126.png]]
+![Pasted image 20260105112126](images/Pasted image 20260105112126.png)
 
 Edited 2051 to match IP-address of target:
-![[images/Pasted image 20260105112247.png]]
+![Pasted image 20260105112247](images/Pasted image 20260105112247.png)
 This exploit doesn't return anything usefull.
 
 This wasn't the right exploit, after looking up a walkthrough I found, this, but I'm not sure how I would have been able to deduce this other then the box name being ClamAV....
-![[Pasted image 20260105134330.png]]
+![Pasted image 20260105134330](images/Pasted image 20260105134330.png)
 
-![[images/Pasted image 20260105125453.png]]
+![Pasted image 20260105125453](images/Pasted image 20260105125453.png)
 
 download 4761, added chmod +x and exucte, returns error, used perl to run, now it works:
-![[images/Pasted image 20260105124937.png]]
+![Pasted image 20260105124937](images/Pasted image 20260105124937.png)
 
 Nmap op port 31337 now reveils new port: 
-![[images/Pasted image 20260105124956.png]]
+![Pasted image 20260105124956](images/Pasted image 20260105124956.png)
 
 netcat to port 31337, who is returns root, cd to /root, found proof.txt.
-![[images/Pasted image 20260105125210.png]]
+![Pasted image 20260105125210](images/Pasted image 20260105125210.png)

