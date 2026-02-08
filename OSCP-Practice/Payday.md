@@ -52,7 +52,7 @@ Focused enumeration on HTTP service revealed:
 - **Application:** CS-Cart e-commerce platform
 - **Version:** 1.3.3 (identified via fingerprinting)
 
-![CS-Cart Application](Pasted%20image%2020260112143048.png)
+![CS-Cart Application](images/Pasted image 20260112143048.png)
 
 ---
 

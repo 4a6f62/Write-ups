@@ -28,10 +28,10 @@ Nmap done: 1 IP address (1 host up) scanned in 195.57 seconds
 
 ```
 
-![[Pasted image 20260206140326.png]]
+![Pasted image 20260206140326](images/Pasted image 20260206140326.png)
 
 Found upload form but it only allows ODT files:
-![[Pasted image 20260206142715.png]]
+![Pasted image 20260206142715](images/Pasted image 20260206142715.png)
 
  Looked for exploit, found:
  https://www.exploit-db.com/exploits/44564
@@ -65,4 +65,4 @@ Let's try that...
 
 ```
 
-![[Pasted image 20260206145533.png]]
+![Pasted image 20260206145533](images/Pasted image 20260206145533.png)

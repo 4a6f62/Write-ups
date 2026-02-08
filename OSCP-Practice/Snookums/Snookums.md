@@ -16,7 +16,7 @@ PORT     STATE SERVICE
 
 Found:
 Simple PHP Photo Gallery v0.8 on port 80.
-![[Pasted image 20260113110520.png]]
+![Pasted image 20260113110520](images/Pasted image 20260113110520.png)
 
 Found exploit:
 https://www.exploit-db.com/exploits/7786

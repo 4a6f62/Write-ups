@@ -187,7 +187,7 @@ Hydra (https://github.com/vanhauser-thc/thc-hydra) finished at 2026-01-23 11:57:
 ```
 
 Logging with admin reveals different files:
-![[Pasted image 20260123115931.png]]
+![Pasted image 20260123115931](images/Pasted image 20260123115931.png)
 
 .htpassword contains:
 ```sh
@@ -220,7 +220,7 @@ Session completed.
 ```
 
 Logging into reveals the contents of index.php as expected:
-![[Pasted image 20260123120609.png]]
+![Pasted image 20260123120609](images/Pasted image 20260123120609.png)
 
 Can't edit index.php, but I can add my own files, but I can't edit them, but I can upload them:
 
@@ -230,7 +230,7 @@ Can't edit index.php, but I can add my own files, but I can't edit them, but I c
 ```
 
 That works!:
-![[Pasted image 20260123121103.png]]
+![Pasted image 20260123121103](images/Pasted image 20260123121103.png)
 
 After trying a whole bunch of options, only "Ivan Sincek" revshell works on port 135??!:
 ```
